@@ -6,8 +6,17 @@
 /
 ├── public/
 ├── src/
-│   └── pages/
-│       └── index.astro
+│   |── pages/
+│   |    └── index.astro
+│   |── components/
+│   |   |── BaseHead.astro
+│   |   |── Navbar
+│   |   |── NavButton
+│   |   └── Slider
+│   |── styles/
+│   |    └── global.css
+|── postcss.config.js
+|── tailwind.config.js
 └── package.json
 ```
 
