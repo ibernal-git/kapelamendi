@@ -1,13 +1,81 @@
 ---
+  import BaseHead from '../components/BaseHead.astro'
+  import Navbar from '../components/Navbar'
+  import Slider from '../components/Slider'
+
+  let title = 'Kapelamendi';
+  let description = 'Empresa de fabricación de maquinaria industrial';
+  let canonicalURL = Astro.request.canonicalURL;
+  let permalink = 'https://kapelamendi.es'
+  const menuItems = [
+    {
+      link: '/',
+      text: 'Inicio'
+    },
+    {
+      link: '/empresa',
+      text: 'Empresa'
+    },
+    {
+      link: '/sectores',
+      text: 'Sectores'
+    },
+    {
+      link: '/servicios',
+      text: 'Servicios'
+    },
+    {
+      link: '/medios',
+      text: 'Medios de producción'
+    },
+    {
+      link: '/calidad',
+      text: 'Calidad'
+    },
+    {
+      link: '/onateck',
+      text: 'Onatek'
+    },
+    {
+      link: '/contacto',
+      text: 'Contacto'
+    }
+  ]
 
 ---
-<html lang="en">
+<html lang="es">
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>Astro</title>
+		<title>{title}</title>
+    <BaseHead title={title} description={description} permalink={permalink} canonicalURL={canonicalURL}/>
+    <style global>
+      @import '../styles/global.css';
+    </style>
 	</head>
 	<body>
-		<h1>Astro</h1>
+  <Navbar menuItems={menuItems} client:load />
+  <Slider />
+		<h1 class="font-bold">Astro</h1>
+    <p style="min-height: 200px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
+    <p style="min-height: 200px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
 	</body>
 </html>
