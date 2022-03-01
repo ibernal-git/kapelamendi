@@ -1,12 +1,14 @@
 ---
   import AppLayout from '../components/AppLayout.astro'
   import Check from '../components/Icons/Check.jsx'
+  import Service from '../components/Icons/Service.jsx'
+  import Control from '../components/Icons/Control.jsx'
+  import Production from '../components/Icons/Production.jsx'
+
   const articles = [
     {
       title: "Servicios",
-      icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="#062b5b">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-            </svg>`,
+      icon: 'service',
       content: [
         "Mecanizado de piezas de hasta 10 toneladas",
         "Montaje de conjuntos y subconjuntos de piezas",
@@ -15,10 +17,7 @@
     },
     {
       title: "Medios de producción",
-      icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="#062b5b">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>`,
+      icon: 'production',
       content: [
         "Medios de producción",
         "Tornos verticales hasta 3800 mm. de diametro",
@@ -30,44 +29,52 @@
     },
     {
       title: "Elementos de control",
-      icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="#062b5b">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-            </svg>`,
+      icon: 'control',
       content: [
         "Tridimensional Stiefelmayer-Zeiss cpm capacidad de 2400 x 1400 x 1200 mm."
       ]
     }
   ]
+  const sectores = [
+    'SIDERÚRGICO',
+    'PRENSAS MECÁNICAS E HIDRÁULICAS',
+    'EÓLICO',
+    'ENERGÍA',
+    'CEMENTERO',
+    'PAPELERO',
+    'MAQUINARIA ESPECIAL',
+    'BIENES DE EQUIPO EN GENERAL'
+  ]
 ---
 <AppLayout>
 <section class="grid lg:grid-cols-2 gap-4">
   <div class="p-4 lg:p-2">
-  <h2 class="text-4xl my-6 font-bold">Mecanizados Kapelamendi</h2>
+  <h2 class="text-secondary text-4xl my-6 font-bold">Mecanizados Kapelamendi</h2>
   <p class="my-2">FABRICACIÓN DE MAQUINARIA INDUSTRIAL ESPECIALIZADA Y MECANIZACIÓN DE PIEZAS</p>
   <p>Fundada en 2.005 con el nombre de MECANIZADOS KAPELAMENDI, S.L.L. nos decicamos a la fabricación y mecanizado bajo plano del cliente.</p>
   </div>
   <div class="mt-6 p-10 py-16 lg:py-4 flex flex-col bg-secondary text-white lg:text-black lg:bg-white">
     <div>
       <div class="mb-10 lg:mb-4">
-        <p class="text-lg inline-flex gap-4 font-bold">
+        <p class="text-primary lg:text-secondary text-lg inline-flex gap-4 font-bold">
           <span class="lg:hidden"><Check color='#fc9200'/></span><span class="check-icon lg:inline-flex"><Check color='#062b5b'/></span> C/ Capelamendi, nº3 en el polígono industrial de Betoño en Vitoria-Gasteiz
         </p>
          <p class="ml-11">Fácil acceso desde los principales nudos de distribución de tráfico, tanto para la capital como para las principales carreteras nacionales, teniendo por tanto una situación privilegiada.</p>
       </div>
       <div class="mb-10 lg:mb-4">
-        <p class="text-lg inline-flex gap-4 font-bold">
+        <p class="text-primary lg:text-secondary text-lg inline-flex gap-4 font-bold">
           <span class="lg:hidden"><Check color='#fc9200'/></span><span class="check-icon lg:inline-flex"><Check color='#062b5b'/></span> Superficie de 6.500 m2 de los cuales se encuentran cubiertos 5.323 m2.
       </p>
       <p class="ml-11">La nave industrial, con un edificio de oficinas de dos plantas adosado, se distribuye en mecanizado, montaje, pintura, almacenes y control de calidad.</p>
      </div>
       <div class="mb-10 lg:mb-4">
-        <p class="text-lg inline-flex gap-4 font-bold">
+        <p class="text-primary lg:text-secondary text-lg inline-flex gap-4 font-bold">
           <span class="lg:hidden"><Check color='#fc9200'/></span><span class="check-icon lg:inline-flex"><Check color='#062b5b'/></span> Máxima fiabilidad y capacidad de mecanizado
       </p>
       <p class="ml-11">Contamos con mandrinadoras, fresadoras, tornos verticales, tornos paralelos, rectificadoras cílíndricas y tangenciales, taladros, mortajadoras, soldadura automática, etc.</p>
      </div>
      <div class="mb-4 lg:mb-4">
-      <p class="text-lg inline-flex gap-4 font-bold">
+      <p class="text-primary lg:text-secondary text-lg inline-flex gap-4 font-bold">
         <span class="lg:hidden"><Check color='#fc9200'/></span><span class="check-icon lg:inline-flex"><Check color='#062b5b'/></span> 8 puentes grúa con capacidad de hasta 50 Tm.
       </p>
      </div>
@@ -75,16 +82,16 @@
   </div>
 </section>
 <section>
-<div class="grid lg:grid-cols-3 gap-4">
+<div class="bg-primary rounded grid lg:grid-cols-3 gap-4">
   {articles.map((article) => {
     return (
       
-        <div class="p-6 rounded shadow-black min-h-40">
+        <div class="p-6 min-h-40">
           <article>
-            <div>{article.icon}</div>
-            <h2 class="text-2xl font-bold mb-6 border-b-2 border-black">{article?.title}</h2>
+            <div>{(article.icon === 'service') ? <Service color='#062b5b' /> : (article.icon === 'production') ? <Production color='#062b5b' /> : <Control color='#062b5b' />}</div>
+            <h2 class="text-secondary text-2xl font-bold mb-6 border-b-2 border-secondary">{article?.title}</h2>
             {article?.content.map((content) => {
-              return <p>{content}</p>
+              return <p class="text-white pb-2">{content}</p>
             })}
           </article>
         </div>
@@ -96,47 +103,142 @@
   </div>
   </section>
   <section class="py-16 px-6">
-    <h2 class="text-2xl font-bold mb-6">Sectores</h2>
+    <h2 class="text-secondary text-2xl font-bold mb-6">Sectores</h2>
     <p>KAPELAMENDI cuenta con personal muy experimentado y cualificado formado por profesionales tanto en las áreas de producción y montaje, como en administración, compras, personal, etc. con un alto grado de compromiso con la organización. Por la versatilidad de la maquinaria disponemos de una gran flexibilidad y adaptación a cada una de las necesidades de nuestros clientes. KAPELAMENDI ofrece un servicio completo y personalizado. Esto ha hecho posible que KAPELAMENDI lleve a cabo su actividad en diversos mercados, principalmente: </p>
     <div class="sectors mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 font-bold text-center justify-center ">
-      <p class="bg-secondary text-white rounded p-4">
-        SIDERÚRGICO
-      </p>
-      <p class="bg-secondary text-white rounded p-4">
-        PRENSAS MECÁNICAS E HIDRÁULICAS
-      </p>
-      <p class="bg-secondary text-white rounded p-4">
-        EÓLICO
-      </p>
-      <p class="bg-secondary text-white rounded p-4">
-        ENERGÍA
-      </p>
-      <p class="bg-secondary text-white rounded p-4">
-        CEMENTERO
-      </p>
-      <p class="bg-secondary text-white rounded p-4">
-        PAPELERO
-      </p>
-      <p class="bg-secondary text-white rounded p-4">
-        MAQUINARIA ESPECIAL
-      </p>
-      <p class="bg-secondary text-white rounded p-4">
-        BIENES DE EQUIPO EN GENERAL
-      </p>
+      {sectores.map((sector)=> {
+        return (
+          <div class="bg-secondary text-white rounded p-4 flex items-center justify-center">
+            <p>{sector}</p>
+          </div>
+          )
+      })}
     </div>
   </section>
-  <section class="py-16">
-    <h2 class="text-2xl font-bold mb-6">Productos y servicios</h2>
-    <div class="flex space-x-16 items-center justify-center">
-      <div class="bg-indigo-300">
-      <img class="object-cover h-96" src="/images/mecanizado.jpg" />
-    </div>
-    <div class="bg-indigo-300">
-      <img class="object-cover h-96" src="/images/mecanizado.jpg" />
+  <section class="py-16 px-6">
+    <h2 class="text-secondary text-2xl font-bold mb-6">Productos y servicios</h2>
+    
+    <div class="flex justify-center gap-4">
+      <div>
+        <img class="shadow-2xl border-2 border-primary object-cover w-full" src="/images/mecanizado.jpg" />
+        <p class="mt-4">Mecanizado de piezas de gran tamaño y peso.</p>
+        <p>Hasta 12 toneladas, en serie corta o individual.</p>
+      </div>
+      <div>
+        <img class="shadow-2xl border-2 border-primary object-cover w-full" src="/images/montaje.jpg" />
+        <p class="mt-4">Montaje de conjuntos y subconjuntos de piezas.</p>
+      </div>
+
+<!--
+    <div class="grid justify-center sm:grid-cols-2 lg:max-w-1/2 gap-4">
+      <div>
+        <img class="object-cover w-1/2" src="/images/mecanizado.jpg" />
+        
+      </div>
+      <div>
+        <p class="mt-4">Mecanizado de piezas de gran tamaño y peso hasta 12 toneladas, en serie corta o individual.</p>
+      </div>
+      <div>
+        <p class="mt-4">Montaje de conjuntos y subconjuntos de piezas.</p>
+      </div>
+      <div>
+        <img class="object-cover w-1/2" src="/images/montaje.jpg" />
+      </div>
+    -->
     </div>
     
+  </section>
+  <section class="py-16 px-6">
+    <h2 class="text-secondary text-2xl font-bold mb-6">Calidad</h2>
+    <p class="mb-2">KAPELAMENDI mantiene un compromiso firme con la Calidad en la línea de la mejora continua, mediante la optimización de sus recursos, la innovación constante, la aplicación de nuevas tecnologías y la búsqueda de nuevos mercados, para conseguir el objetivo de "cero defectos" y unos productos de la máxima eficacia, fiabilidad y durabilidad a precios competitivos.</p>
+    <img class="shadow-2xl border-2 border-primary my-16 object-cover w-full max-w-[500px] md:w-1/3 mx-auto" src="/images/metrologia.jpeg" />
+    <p class="mb-2">La empresa cuenta con la acreditación de AENOR  de su sistema de calidad en ISO 9001:2015.</p>
+    <p class="mb-16">
+      Para asegurar la correcta verificación de los productos fabricados se cuenta en el taller y en metrología con todos los equipos necesarios (calibres, micrómetros, sondas... ) así como un equipo de medición tridimensional Stiefelmayer-Zeiss con capacidad de 2.400 x 1.400 x 1.200 mm.
+    </p>
+    <div class="flex flex-col space-y-16 lg:space-y-0 lg:flex-row">
+      <img class="shadow-2xl border-2 border-primary object-cover w-full max-w-[500px] md:w-1/2 mx-auto" src="/images/calidad.jpeg" />
+      <img class="shadow-2xl border-2 border-primary object-cover w-full max-w-[500px] md:w-1/2 mx-auto" src="/images/iso.jpeg" />
     </div>
+  </section>
+  <section class="py-16 px-6">
+    <h2 class="text-secondary text-2xl font-bold mb-6">Medios de producción</h2>
+    <p class="mb-2">Tornos verticales hasta 3.800 mm. de diámetro.</p>
+    <p class="mb-2">Tornos horizontales hasta 3.000 mm. de longitud.</p>
+    <p class="mb-2">Mandrinadoras de columna hasta 5.000 x 2.500 mm.</p>
+    <p class="mb-2">Fresadoras hasta 5.000 mm.</p>
+    <p class="mb-2">Rectificadoras, taladros, amortajadoras, etc.</p>
+    <p class="mb-2">Tridimensional Stiefelmayer-Zeis con capacidad de 2.400 x 1.400 x 1.200 mm.</p>
     
+  </section>
+  <section class="bg-secondary">
+  <div class="sectors bg-secondary py-16 rounded w-full">
+      <div class="w-1/2 mx-auto pb-16 lg:px-16">
+        <div class="text-white mt-4 text-center">
+          <h2 class="text-2xl font-bold mb-6">TORNOS VERTICALES</h2>
+          <p>Capacidad para tornear:</p>
+          <p>3.750 mm DIAMETRO, 1.700 mm ALTURA Y SOPORTANDO</p>
+          <p>HASTA 10.000 Kg.</p>
+        </div>
+      </div>
+      <div class="flex flex-col space-y-16 lg:space-y-0 lg:flex-row">
+        <img class="shadow-2xl border-2 border-primary object-cover w-full max-w-[500px] md:w-1/2 mx-auto" src="/images/torno-1.jpeg" />
+        <img class="shadow-2xl border-2 border-primary object-cover w-full max-w-[500px] md:w-1/2 mx-auto" src="/images/torno-2.jpeg" />
+      </div>
+    </div>
+  </section>
+  <section>
+  <div class="sectors py-16 rounded w-full">
+      <div class="w-1/2 mx-auto pb-16 lg:px-16">
+        <div class="mt-4 text-center">
+          <h2 class="text-2xl font-bold mb-6">TORNOS PARALELOS</h2>
+          <p>Capacidad para tornear : hasta 1.000 mm de diámetro y  3.000 mm. de longitud</p>
+          <p> soportando hasta  6.000 kg.</p>
+        </div>
+      </div>
+      <div class="flex flex-col space-y-16 lg:space-y-0 lg:flex-row">
+        <img class="shadow-2xl border-2 border-primary object-cover w-full max-w-[500px] md:w-1/2 mx-auto" src="/images/torno-paralelo.jpeg" />
+      </div>
+    </div>
+  </section>
+  <section class="bg-secondary">
+  <div class="sectors bg-secondary py-16 rounded w-full">
+      <div class="w-1/2 mx-auto pb-16 lg:px-16">
+        <div class="text-white mt-4 text-center">
+          <h2 class="text-2xl font-bold mb-6">FRESADORAS Y MANDRINADORAS</h2>
+          <p>Capacidad de mandrinado: hasta 5.000 mm x 2.500 mm.</p>
+          <p>soportando hasta  12.500 kg.</p>
+        </div>
+      </div>
+      <div class="flex flex-col space-y-16 lg:space-y-0 lg:flex-row">
+        <img class="shadow-2xl border-2 border-primary object-cover w-full max-w-[500px] md:w-1/2 mx-auto" src="/images/fresadoras-mandrinadoras-1.jpeg" />
+        <img class="shadow-2xl border-2 border-primary object-cover w-full max-w-[500px] md:w-1/2 mx-auto" src="/images/fresadoras-mandrinadoras-2.jpeg" />
+      </div>
+    </div>
+  </section>
+  <section>
+  <div class="sectors py-16 rounded w-full">
+      <div class="w-1/2 mx-auto pb-16 lg:px-16">
+        <div class="mt-4 text-center">
+          <h2 class="text-2xl font-bold mb-6">RECTIFICADORAS</h2>
+          <p>Rectificado de piezas con un diámetro máximo rectificable de 600 mm.</p>
+          <p>longitud máxima de 3.500 mm.</p>
+        </div>
+      </div>
+      <div class="flex flex-col space-y-16 lg:space-y-0 lg:flex-row">
+        <img class="shadow-2xl border-2 border-primary object-cover w-full max-w-[500px] md:w-1/2 mx-auto" src="/images/rectificadoras-1.jpeg" />
+      </div>
+      <div class="w-1/2 mx-auto pb-16 lg:px-16">
+        <div class="mt-16 text-center">
+          <p>Rectificadora tangencial para una superficie máxima rectificable de 4.000mm x 700mm.</p>
+        </div>
+      </div>
+      <div class="flex flex-col space-y-16 lg:space-y-0 lg:flex-row">
+        <img class="shadow-2xl border-2 border-primary object-cover w-full max-w-[500px] md:w-1/2 mx-auto" src="/images/rectificadoras-2.jpeg" />
+        <img class="shadow-2xl border-2 border-primary object-cover w-full max-w-[500px] md:w-1/2 mx-auto" src="/images/rectificadoras-3.jpeg" />
+      </div>
+      
+    </div>
   </section>
 
 </AppLayout>
