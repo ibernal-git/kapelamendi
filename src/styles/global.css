@@ -10,3 +10,15 @@
   --accent: #fff0db;
 }
 
+@media (max-width: 1024px) {
+  .check-icon {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .sectors {
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

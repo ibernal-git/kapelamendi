@@ -1,24 +1,23 @@
 import NavButton from '../NavButton'
 import { useState } from 'react'
-export default function Navbar ({ menuItems }) {
+export default function Navbar ({ menuItems, client }) {
   const [isHidden, setIsHidden] = useState(true)
   const handleMenuIcon = () => {
     setIsHidden(!isHidden)
   }
   return (
-    <div>
-      <nav className='bg-primary py-4 px-8 fixed w-full'>
-        <div className='max-w-7xl mx-auto'>
-          <div className='flex justify-between items-center'>
-            <div className='items-center text-lg font-bold'>Kapelamendi</div>
-            <div className='hidden lg:flex items-center space-x-4 text-md font-medium'>
-              {menuItems.map((item) => {
-                return <NavButton key={item.link} link={item.link}>{item.text}</NavButton>
-              })}
-            </div>
-            <div className='lg:hidden flex items-center'>
-              <button onClick={handleMenuIcon}>
-                {
+    <nav className='bg-primary py-4 px-8 fixed w-full'>
+      <div className='max-w-8xl mx-auto border-b-2 pb-4 lg:pb-0 lg:border-0 border-black'>
+        <div className='flex justify-between items-center'>
+          <div className='items-center text-lg font-bold'>Kapelamendi</div>
+          <div className='hidden lg:flex items-center space-x-4 text-md font-medium'>
+            {menuItems.map((item) => {
+              return <NavButton key={item.link} link={item.link}>{item.text}</NavButton>
+            })}
+          </div>
+          <div className='lg:hidden flex items-center'>
+            <button onClick={handleMenuIcon}>
+              {
                   isHidden
 
                     ? (
@@ -32,21 +31,15 @@ export default function Navbar ({ menuItems }) {
                       </svg>
                       )
                 }
-
-              </button>
-
-            </div>
-
+            </button>
           </div>
         </div>
-        <div className={` ${isHidden ? 'hidden' : ''} lg:hidden text-md font-medium items-center text-center`}>
-          {menuItems.map((item) => {
-            return <NavButton key={item.link} link={item.link} isMobile>{item.text}</NavButton>
-          })}
-        </div>
-      </nav>
-
-    </div>
-
+      </div>
+      <div className={` ${isHidden ? 'hidden' : ''} lg:hidden text-md font-medium items-center text-center`}>
+        {menuItems.map((item) => {
+          return <NavButton key={item.link} link={item.link} isMobile>{item.text}</NavButton>
+        })}
+      </div>
+    </nav>
   )
 }

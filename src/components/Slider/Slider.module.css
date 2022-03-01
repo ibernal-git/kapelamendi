@@ -1,6 +1,6 @@
 .slider {
   display: flex;
-  
+  padding-top: 60px;
   width: 100%;
   height: 500px;
 
@@ -19,4 +19,10 @@
   height: 500px;
   object-fit: cover;
   scroll-snap-align: center;
+}
+
+@media (max-width: 1024px) {
+  .slider {
+    padding-top: 78px;
+  }
 }

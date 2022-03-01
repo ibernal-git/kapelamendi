@@ -1,0 +1,72 @@
+---
+  import BaseHead from './BaseHead.astro'
+  import Navbar from './Navbar'
+  import Slider from './Slider'
+  import Content from './Content.astro'
+  import Footer from './Footer.astro'
+
+  let title = 'Kapelamendi';
+  let description = 'Empresa de fabricación de maquinaria industrial';
+  let canonicalURL = Astro.request.canonicalURL;
+  let permalink = 'https://kapelamendi.es'
+  const menuItems = [
+    {
+      link: '/',
+      text: 'Inicio'
+    },
+    {
+      link: '/empresa',
+      text: 'Empresa'
+    },
+    {
+      link: '/sectores',
+      text: 'Sectores'
+    },
+    {
+      link: '/servicios',
+      text: 'Servicios'
+    },
+    {
+      link: '/medios',
+      text: 'Medios de producción'
+    },
+    {
+      link: '/calidad',
+      text: 'Calidad'
+    },
+    {
+      link: '/onateck',
+      text: 'Onatek'
+    },
+    {
+      link: '/contacto',
+      text: 'Contacto'
+    }
+  ]
+
+---
+
+<html lang="es">
+	<head>
+		<title>{title}</title>
+    <BaseHead title={title} description={description} permalink={permalink} canonicalURL={canonicalURL}/>
+    <style global>
+      @import '../styles/global.css';
+    </style>
+	</head>
+	<body>
+  <div class="min-h-screen flex flex-col justify-between">
+    <script>/* @ts-ignore */</script>
+    <Navbar menuItems={menuItems} client:load />
+    <Slider />
+    <Content>
+      <slot />
+    </Content>
+    <Footer>
+      <p class="text-xs md:text-base">Diseñado por Gemetik - Soluciones Tecnológicas</p>
+      <p class="text-xs md:text-base">Todos los derechos reservados © 2022</p>
+      <p class="text-xs md:text-base">Política de cookies | Política de privacidad | Aviso legal</p>
+    </Footer>
+  </div>
+	</body>
+</html>

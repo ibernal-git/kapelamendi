@@ -1,81 +1,142 @@
 ---
-  import BaseHead from '../components/BaseHead.astro'
-  import Navbar from '../components/Navbar'
-  import Slider from '../components/Slider'
-
-  let title = 'Kapelamendi';
-  let description = 'Empresa de fabricación de maquinaria industrial';
-  let canonicalURL = Astro.request.canonicalURL;
-  let permalink = 'https://kapelamendi.es'
-  const menuItems = [
+  import AppLayout from '../components/AppLayout.astro'
+  import Check from '../components/Icons/Check.jsx'
+  const articles = [
     {
-      link: '/',
-      text: 'Inicio'
+      title: "Servicios",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="#062b5b">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>`,
+      content: [
+        "Mecanizado de piezas de hasta 10 toneladas",
+        "Montaje de conjuntos y subconjuntos de piezas",
+        "Construcción, reparación y montaje de maquinaria especial, bajo plano del cliente, hasta 50 toneladas"
+      ]
     },
     {
-      link: '/empresa',
-      text: 'Empresa'
+      title: "Medios de producción",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="#062b5b">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>`,
+      content: [
+        "Medios de producción",
+        "Tornos verticales hasta 3800 mm. de diametro",
+        "Tornos horizontales hasta 3000mm de longitud",
+        "Mandrinadoras de columna hasta 5000 x 2500 mm",
+        "Fresadoras hasta 5000 mm",
+        "Rectificadoras, taladros, mortajadoras, etc."
+      ]
     },
     {
-      link: '/sectores',
-      text: 'Sectores'
-    },
-    {
-      link: '/servicios',
-      text: 'Servicios'
-    },
-    {
-      link: '/medios',
-      text: 'Medios de producción'
-    },
-    {
-      link: '/calidad',
-      text: 'Calidad'
-    },
-    {
-      link: '/onateck',
-      text: 'Onatek'
-    },
-    {
-      link: '/contacto',
-      text: 'Contacto'
+      title: "Elementos de control",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="#062b5b">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+            </svg>`,
+      content: [
+        "Tridimensional Stiefelmayer-Zeiss cpm capacidad de 2400 x 1400 x 1200 mm."
+      ]
     }
   ]
-
 ---
-<html lang="es">
-	<head>
-		<title>{title}</title>
-    <BaseHead title={title} description={description} permalink={permalink} canonicalURL={canonicalURL}/>
-    <style global>
-      @import '../styles/global.css';
-    </style>
-	</head>
-	<body>
-  <Navbar menuItems={menuItems} client:load />
-  <Slider />
-		<h1 class="font-bold">Astro</h1>
-    <p style="min-height: 200px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
-    <p style="min-height: 200px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis veniam consequatur suscipit tenetur modi ad soluta. Ratione repellat, odit incidunt consequatur, voluptates sit nobis perspiciatis, natus dicta vero soluta?</p>
-	</body>
-</html>
+<AppLayout>
+<section class="grid lg:grid-cols-2 gap-4">
+  <div class="p-4 lg:p-2">
+  <h2 class="text-4xl my-6 font-bold">Mecanizados Kapelamendi</h2>
+  <p class="my-2">FABRICACIÓN DE MAQUINARIA INDUSTRIAL ESPECIALIZADA Y MECANIZACIÓN DE PIEZAS</p>
+  <p>Fundada en 2.005 con el nombre de MECANIZADOS KAPELAMENDI, S.L.L. nos decicamos a la fabricación y mecanizado bajo plano del cliente.</p>
+  </div>
+  <div class="mt-6 p-10 py-16 lg:py-4 flex flex-col bg-secondary text-white lg:text-black lg:bg-white">
+    <div>
+      <div class="mb-10 lg:mb-4">
+        <p class="text-lg inline-flex gap-4 font-bold">
+          <span class="lg:hidden"><Check color='#fc9200'/></span><span class="check-icon lg:inline-flex"><Check color='#062b5b'/></span> C/ Capelamendi, nº3 en el polígono industrial de Betoño en Vitoria-Gasteiz
+        </p>
+         <p class="ml-11">Fácil acceso desde los principales nudos de distribución de tráfico, tanto para la capital como para las principales carreteras nacionales, teniendo por tanto una situación privilegiada.</p>
+      </div>
+      <div class="mb-10 lg:mb-4">
+        <p class="text-lg inline-flex gap-4 font-bold">
+          <span class="lg:hidden"><Check color='#fc9200'/></span><span class="check-icon lg:inline-flex"><Check color='#062b5b'/></span> Superficie de 6.500 m2 de los cuales se encuentran cubiertos 5.323 m2.
+      </p>
+      <p class="ml-11">La nave industrial, con un edificio de oficinas de dos plantas adosado, se distribuye en mecanizado, montaje, pintura, almacenes y control de calidad.</p>
+     </div>
+      <div class="mb-10 lg:mb-4">
+        <p class="text-lg inline-flex gap-4 font-bold">
+          <span class="lg:hidden"><Check color='#fc9200'/></span><span class="check-icon lg:inline-flex"><Check color='#062b5b'/></span> Máxima fiabilidad y capacidad de mecanizado
+      </p>
+      <p class="ml-11">Contamos con mandrinadoras, fresadoras, tornos verticales, tornos paralelos, rectificadoras cílíndricas y tangenciales, taladros, mortajadoras, soldadura automática, etc.</p>
+     </div>
+     <div class="mb-4 lg:mb-4">
+      <p class="text-lg inline-flex gap-4 font-bold">
+        <span class="lg:hidden"><Check color='#fc9200'/></span><span class="check-icon lg:inline-flex"><Check color='#062b5b'/></span> 8 puentes grúa con capacidad de hasta 50 Tm.
+      </p>
+     </div>
+  </div>
+  </div>
+</section>
+<section>
+<div class="grid lg:grid-cols-3 gap-4">
+  {articles.map((article) => {
+    return (
+      
+        <div class="p-6 rounded shadow-black min-h-40">
+          <article>
+            <div>{article.icon}</div>
+            <h2 class="text-2xl font-bold mb-6 border-b-2 border-black">{article?.title}</h2>
+            {article?.content.map((content) => {
+              return <p>{content}</p>
+            })}
+          </article>
+        </div>
+      
+      
+    )
+    }
+  )}
+  </div>
+  </section>
+  <section class="py-16 px-6">
+    <h2 class="text-2xl font-bold mb-6">Sectores</h2>
+    <p>KAPELAMENDI cuenta con personal muy experimentado y cualificado formado por profesionales tanto en las áreas de producción y montaje, como en administración, compras, personal, etc. con un alto grado de compromiso con la organización. Por la versatilidad de la maquinaria disponemos de una gran flexibilidad y adaptación a cada una de las necesidades de nuestros clientes. KAPELAMENDI ofrece un servicio completo y personalizado. Esto ha hecho posible que KAPELAMENDI lleve a cabo su actividad en diversos mercados, principalmente: </p>
+    <div class="sectors mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 font-bold text-center justify-center ">
+      <p class="bg-secondary text-white rounded p-4">
+        SIDERÚRGICO
+      </p>
+      <p class="bg-secondary text-white rounded p-4">
+        PRENSAS MECÁNICAS E HIDRÁULICAS
+      </p>
+      <p class="bg-secondary text-white rounded p-4">
+        EÓLICO
+      </p>
+      <p class="bg-secondary text-white rounded p-4">
+        ENERGÍA
+      </p>
+      <p class="bg-secondary text-white rounded p-4">
+        CEMENTERO
+      </p>
+      <p class="bg-secondary text-white rounded p-4">
+        PAPELERO
+      </p>
+      <p class="bg-secondary text-white rounded p-4">
+        MAQUINARIA ESPECIAL
+      </p>
+      <p class="bg-secondary text-white rounded p-4">
+        BIENES DE EQUIPO EN GENERAL
+      </p>
+    </div>
+  </section>
+  <section class="py-16">
+    <h2 class="text-2xl font-bold mb-6">Productos y servicios</h2>
+    <div class="flex space-x-16 items-center justify-center">
+      <div class="bg-indigo-300">
+      <img class="object-cover h-96" src="/images/mecanizado.jpg" />
+    </div>
+    <div class="bg-indigo-300">
+      <img class="object-cover h-96" src="/images/mecanizado.jpg" />
+    </div>
+    
+    </div>
+    
+  </section>
+
+</AppLayout>

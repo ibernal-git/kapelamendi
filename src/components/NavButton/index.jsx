@@ -9,7 +9,6 @@ export default function MenuButton ({ link, isMobile, children }) {
 
   const isCurrentPage = (link) => {
     if (pathname === link) {
-      console.log('es true')
       return true
     }
     return false
