@@ -16,9 +16,26 @@
   }
 }
 @media (max-width: 1024px) {
-  .sectors {
-    max-width: 95%;
+  .mobile-full-w {
+    max-width: 100%;
+  }
+  .mobile-80-w {
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.img-shadow {
+  -webkit-box-shadow: 14px 18px 0px 5px #fc9200; 
+  box-shadow: 15px 15px 0px 5px #fc9200;
+}
+html {
+  scroll-behavior: smooth;
+}
+section{
+  scroll-margin-top: 60px;
+}
+.menu-active {
+  color: white;
 }

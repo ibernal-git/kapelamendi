@@ -11,35 +11,35 @@
   let permalink = 'https://kapelamendi.es'
   const menuItems = [
     {
-      link: '/',
+      link: '/#inicio',
       text: 'Inicio'
     },
     {
-      link: '/empresa',
+      link: '/#empresa',
       text: 'Empresa'
     },
     {
-      link: '/sectores',
+      link: '/#sectores',
       text: 'Sectores'
     },
     {
-      link: '/servicios',
+      link: '/#productos-y-servicios',
       text: 'Servicios'
     },
     {
-      link: '/medios',
+      link: '/medios-de-produccion',
       text: 'Medios de producción'
     },
     {
-      link: '/calidad',
+      link: '/#calidad',
       text: 'Calidad'
     },
     {
-      link: '/onateck',
+      link: '/#onatek',
       text: 'Onatek'
     },
     {
-      link: '/contacto',
+      link: '/#contacto',
       text: 'Contacto'
     }
   ]
@@ -55,7 +55,7 @@
     </style>
 	</head>
 	<body>
-  <div class="min-h-screen flex flex-col justify-between">
+  <div id="inicio" class="min-h-screen flex flex-col justify-between">
     <script>/* @ts-ignore */</script>
     <Navbar menuItems={menuItems} client:load />
     <Slider />

@@ -1,0 +1,128 @@
+---
+  import AppLayout from '../components/AppLayout.astro'
+  import Check from '../components/Icons/Check.jsx'
+  import Service from '../components/Icons/Service.jsx'
+  import Control from '../components/Icons/Control.jsx'
+  import Production from '../components/Icons/Production.jsx'
+
+  const articles = [
+    {
+      title: "Servicios",
+      icon: 'service',
+      content: [
+        "Mecanizado de piezas de hasta 10 toneladas",
+        "Montaje de conjuntos y subconjuntos de piezas",
+        "Construcción, reparación y montaje de maquinaria especial, bajo plano del cliente, hasta 50 toneladas"
+      ]
+    },
+    {
+      title: "Medios de producción",
+      icon: 'production',
+      content: [
+        "Medios de producción",
+        "Tornos verticales hasta 3800 mm. de diametro",
+        "Tornos horizontales hasta 3000mm de longitud",
+        "Mandrinadoras de columna hasta 5000 x 2500 mm",
+        "Fresadoras hasta 5000 mm",
+        "Rectificadoras, taladros, mortajadoras, etc."
+      ]
+    },
+    {
+      title: "Elementos de control",
+      icon: 'control',
+      content: [
+        "Tridimensional Stiefelmayer-Zeiss cpm capacidad de 2400 x 1400 x 1200 mm."
+      ]
+    }
+  ]
+  const sectores = [
+    'SIDERÚRGICO',
+    'PRENSAS MECÁNICAS E HIDRÁULICAS',
+    'EÓLICO',
+    'ENERGÍA',
+    'CEMENTERO',
+    'PAPELERO',
+    'MAQUINARIA ESPECIAL',
+    'BIENES DE EQUIPO EN GENERAL'
+  ]
+---
+<AppLayout>
+  <section class="lg:bg-slate-300 pt-16 px-6">
+    <div  class="lg:container text-white lg:text-center py-16">
+      <h2 class="text-secondary text-4xl font-bold mb-6">Medios de producción</h2>
+      
+    </div>
+    
+  </section>
+  <section class="lg:bg-slate-300 pb-32">
+  <div class="lg:container mobile-full-w bg-secondary py-16 lg:rounded w-full lg:px-6">
+      <div class="w-1/2 mx-auto pb-16 lg:px-16">
+        <div class="text-white mt-4 text-center">
+          <h2 class="text-2xl font-bold mb-6">TORNOS VERTICALES</h2>
+          <p>Capacidad para tornear:</p>
+          <p>3.750 mm DIAMETRO, 1.700 mm ALTURA Y SOPORTANDO</p>
+          <p>HASTA 10.000 Kg.</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-1.5 flex-col space-y-16 lg:space-y-0 lg:flex-row">
+        <img class="shadow-2xl border-2 border-primary object-cover w-full max-w-[500px] md:w-1/2 mx-auto" src="/images/torno-1.jpeg" />
+        <img class="shadow-2xl border-2 border-primary object-cover w-full max-w-[500px] md:w-1/2 mx-auto" src="/images/torno-2.jpeg" />
+      </div>
+    </div>
+  </section>
+  <section class="lg:container">
+  <div class="mobile-80-w py-16 rounded w-full">
+      <div class="w-1/2 mx-auto pb-16 lg:px-16">
+        <div class="mt-4 text-center">
+          <h2 class="text-2xl font-bold mb-6">TORNOS PARALELOS</h2>
+          <p>Capacidad para tornear : hasta 1.000 mm de diámetro y  3.000 mm. de longitud</p>
+          <p> soportando hasta  6.000 kg.</p>
+        </div>
+      </div>
+      <div class="flex flex-col space-y-16 lg:space-y-0 lg:flex-row">
+        <img class="shadow-2xl border-2 border-primary object-cover w-full max-w-[500px] md:w-1/2 mx-auto" src="/images/torno-paralelo.jpeg" />
+      </div>
+    </div>
+  </section>
+  <section class="lg:container bg-secondary lg:bg-transparent">
+  <div class="mobile-full-w bg-secondary py-16 lg:rounded w-full">
+      <div class="w-1/2 mx-auto pb-16 lg:px-16">
+        <div class="text-white mt-4 text-center">
+          <h2 class="text-2xl font-bold mb-6">FRESADORAS Y MANDRINADORAS</h2>
+          <p>Capacidad de mandrinado: hasta 5.000 mm x 2.500 mm.</p>
+          <p>soportando hasta  12.500 kg.</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-1.5 flex-col space-y-16 lg:space-y-0 lg:flex-row px-6">
+        <img class="shadow-2xl border-2 border-primary object-cover w-full max-w-[500px] md:w-1/2 mx-auto" src="/images/fresadoras-mandrinadoras-1.jpeg" />
+        <img class="shadow-2xl border-2 border-primary object-cover w-full max-w-[500px] md:w-1/2 mx-auto" src="/images/fresadoras-mandrinadoras-2.jpeg" />
+      </div>
+    </div>
+  </section>
+  <section class="lg:container">
+  <div class="mobile-80-w py-16 rounded w-full">
+      <div class="w-1/2 mx-auto pb-16 lg:px-16">
+        <div class="mt-4 text-center">
+          <h2 class="text-2xl font-bold mb-6">RECTIFICADORAS</h2>
+          <p>Rectificado de piezas con un diámetro máximo rectificable de 600 mm.</p>
+          <p>longitud máxima de 3.500 mm.</p>
+        </div>
+      </div>
+      <div class="flex flex-col space-y-16 lg:space-y-0 lg:flex-row">
+        <img class="shadow-2xl border-2 border-primary object-cover w-full max-w-[500px] md:w-1/2 mx-auto" src="/images/rectificadoras-1.jpeg" />
+      </div>
+      <div class="w-1/2 mx-auto pb-16 lg:px-16">
+        <div class="mt-16 text-center">
+          <p>Rectificadora tangencial para una superficie máxima rectificable de 4.000mm x 700mm.</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-1.5 flex-col space-between space-y-16 lg:space-y-0 lg:flex-row">
+        <img class="img-shadow object-cover w-full max-w-[500px] md:w-1/2 mx-auto" src="/images/rectificadoras-2.jpeg" />
+        <img class="img-shadow object-cover w-full max-w-[500px] md:w-1/2 mx-auto" src="/images/rectificadoras-3.jpeg" />
+      </div>
+      
+    </div>
+  </section>
+  
+
+</AppLayout>

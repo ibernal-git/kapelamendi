@@ -1,21 +1,13 @@
-import { useState, useEffect } from 'react'
 
-export default function MenuButton ({ link, isMobile, children }) {
-  const [pathname, setPathname] = useState('')
-
-  useEffect(() => {
-    setPathname(globalThis.document.location.pathname)
-  }, [])
-
-  const isCurrentPage = (link) => {
-    if (pathname === link) {
+export default function MenuButton ({ link, menuActive, title, isMobile, children, handleClick }) {
+  const isActive = () => {
+    if (link === menuActive) {
       return true
     }
     return false
   }
   return (
-
-    <a href={link} className={`${isMobile ? 'block py-2' : ''} ${isCurrentPage(link) ? 'aria-current="page"' : ''}`}>{children}</a>
+    <a href={link} onClick={() => handleClick(link)} className={`${isMobile ? 'block py-2' : ''} ${isActive() ? 'aria-current="page" menu-active' : ''}`}>{children}</a>
 
   )
 }
