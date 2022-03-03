@@ -4,45 +4,13 @@
   import Slider from './Slider'
   import Content from './Content.astro'
   import Footer from './Footer.astro'
+  import db from '../data/db.json'
 
-  let title = 'Kapelamendi';
-  let description = 'Empresa de fabricación de maquinaria industrial';
-  let canonicalURL = Astro.request.canonicalURL;
-  let permalink = 'https://kapelamendi.es'
-  const menuItems = [
-    {
-      link: '/#inicio',
-      text: 'Inicio'
-    },
-    {
-      link: '/#empresa',
-      text: 'Empresa'
-    },
-    {
-      link: '/#sectores',
-      text: 'Sectores'
-    },
-    {
-      link: '/#productos-y-servicios',
-      text: 'Servicios'
-    },
-    {
-      link: '/medios-de-produccion',
-      text: 'Medios de producción'
-    },
-    {
-      link: '/#calidad',
-      text: 'Calidad'
-    },
-    {
-      link: '/#onatek',
-      text: 'Onatek'
-    },
-    {
-      link: '/#contacto',
-      text: 'Contacto'
-    }
-  ]
+  let title = db.title;
+  let description = db.description;
+  let canonicalURL = db.canonicalURL;
+  let permalink = db.permalink
+  const menuItems = db.menuItems
 
 ---
 
@@ -50,9 +18,6 @@
 	<head>
 		<title>{title}</title>
     <BaseHead title={title} description={description} permalink={permalink} canonicalURL={canonicalURL}/>
-    <style global>
-      @import '../styles/global.css';
-    </style>
 	</head>
 	<body>
   <div id="inicio" class="min-h-screen flex flex-col justify-between">

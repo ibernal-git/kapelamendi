@@ -5,48 +5,11 @@
   import Control from '../components/Icons/Control.jsx'
   import Production from '../components/Icons/Production.jsx'
   import Phone from '../components/Icons/Phone.jsx'
+  import db from '../data/db.json'
 
 
-  const articles = [
-    {
-      title: "Servicios",
-      icon: 'service',
-      content: [
-        "Mecanizado de piezas de hasta 10 toneladas",
-        "Montaje de conjuntos y subconjuntos de piezas",
-        "Construcción, reparación y montaje de maquinaria especial, bajo plano del cliente, hasta 50 toneladas"
-      ]
-    },
-    {
-      title: "Medios de producción",
-      icon: 'production',
-      content: [
-        "Medios de producción",
-        "Tornos verticales hasta 3800 mm. de diametro",
-        "Tornos horizontales hasta 3000mm de longitud",
-        "Mandrinadoras de columna hasta 5000 x 2500 mm",
-        "Fresadoras hasta 5000 mm",
-        "Rectificadoras, taladros, mortajadoras, etc."
-      ]
-    },
-    {
-      title: "Elementos de control",
-      icon: 'control',
-      content: [
-        "Tridimensional Stiefelmayer-Zeiss cpm capacidad de 2400 x 1400 x 1200 mm."
-      ]
-    }
-  ]
-  const sectores = [
-    'SIDERÚRGICO',
-    'PRENSAS MECÁNICAS E HIDRÁULICAS',
-    'EÓLICO',
-    'ENERGÍA',
-    'CEMENTERO',
-    'PAPELERO',
-    'MAQUINARIA ESPECIAL',
-    'BIENES DE EQUIPO EN GENERAL'
-  ]
+  const articles = db.articles
+  const sectores = db.sectores
 ---
 <AppLayout>
 <section id="empresa" class="lg:container py-16 grid lg:grid-cols-2 gap-4">
@@ -142,12 +105,13 @@
       Para asegurar la correcta verificación de los productos fabricados se cuenta en el taller y en metrología con todos los equipos necesarios (calibres, micrómetros, sondas... ) así como un equipo de medición tridimensional Stiefelmayer-Zeiss con capacidad de 2.400 x 1.400 x 1.200 mm.
     </p>
     <div class="flex flex-wrap gap-1.5 flex-col space-y-16 lg:space-y-0 lg:flex-row">
-      <img class="shadow-2xl border-2 border-primary object-cover w-full max-w-[500px] md:w-1/2 mx-auto" src="/images/calidad.jpeg" />
-      <img class="shadow-2xl border-2 border-primary object-cover w-full max-w-[500px] md:w-1/2 mx-auto" src="/images/iso.jpeg" />
+      <img class="shadow-2xl border-2 border-primary object-cover w-full max-w-[500px] md:w-1/2 mx-auto" src="/images/calidad.webp" />
+      <img class="shadow-2xl border-2 border-primary object-cover w-full max-w-[500px] md:w-1/2 mx-auto" src="/images/certificado-aenor.webp" />
     </div>
   </section>
   <section id="onatek" class="lg:container py-32 px-6">
     <h2 class="text-secondary text-4xl font-bold mb-6">Onatek</h2>
+    <img class="my-16 object-cover w-full max-w-[500px] md:w-1/3 mx-auto" src="/images/kapelamendi-onatek.jpg" />
     <p class="mb-2">ONATEK agrupa tres centros productivos complementarios referentes en su sector, con una alta experiencia en la fabricación de componentes y preparados para asumir nuevos retos productivos.</p>
     <p class="mb-2">Ofrece desde soluciones de subcontratación de piezas hasta la elaboración de máquinas complejas y prototipos de llave en mano.</p>
     <img class="shadow-2xl border-2 border-primary my-16 object-cover w-full max-w-[500px] md:w-1/3 mx-auto" src="/images/onatek.jpg" />
