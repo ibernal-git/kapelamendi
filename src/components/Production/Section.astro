@@ -2,13 +2,17 @@
 
     export interface Props {
     background: string,
+    id?: string,
+    styles?: string
     }
-    const { background } = Astro.props;
+    const { id, background, styles } = Astro.props;
+    //lg:container py-16 grid lg:grid-cols-2 gap-4
+    const tailwindClass = `lg:container mobile-full-w bg-transparent py-16 lg:rounded w-full ${styles}`
 
 ---
 
-<section class={background}>
-    <div class="lg:container mobile-full-w bg-transparent py-16 lg:rounded w-full">
+<section id={id} class={background}>
+    <div class={tailwindClass}>
       <slot />
     </div>
   </section>
