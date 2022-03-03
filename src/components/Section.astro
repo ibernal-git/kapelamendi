@@ -1,0 +1,14 @@
+---
+
+    export interface Props {
+    background: string,
+    }
+    const { background } = Astro.props;
+
+---
+
+<section class={background}>
+    <div class="lg:container mobile-full-w bg-transparent py-16 lg:rounded w-full">
+      <slot />
+    </div>
+  </section>

@@ -30,6 +30,11 @@
   -webkit-box-shadow: 14px 18px 0px 5px #fc9200; 
   box-shadow: 15px 15px 0px 5px #fc9200;
 }
+@media (min-width:1024px) and (max-width:1279px) {
+  .img-shadow {
+    margin-bottom: 45px;
+  }
+}
 html {
   scroll-behavior: smooth;
 }

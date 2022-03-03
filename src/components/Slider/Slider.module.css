@@ -24,5 +24,6 @@
 @media (max-width: 1024px) {
   .slider {
     padding-top: 78px;
+    max-height: 300px;
   }
 }

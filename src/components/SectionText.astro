@@ -1,0 +1,17 @@
+---
+  export interface Props {
+    textColor: string,
+    title: string
+  }
+  const { textColor, title } = Astro.props;
+  const tailwindClass = `${textColor} mt-4 text-center`
+
+---
+
+
+<div class="pb-16 lg:px-16">
+  <div class={tailwindClass}>
+    <h2 class="text-2xl font-bold mb-6">{title}</h2>
+    <slot />
+  </div>
+</div>
