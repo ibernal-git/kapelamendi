@@ -6,21 +6,32 @@ export default function Navbar ({ menuItems, client }) {
   const [pathname, setPathname] = useState('')
 
   useEffect(() => {
+    const menuItem = getPageLocation()
+
+    setPathname(menuItem?.link)
+    setMenuActive(menuItem?.path)
+    window.history.pushState(menuItem?.href, menuItem?.title, menuItem?.link)
+    document.title = menuItem?.title
+    const meta = document.getElementsByTagName('meta')
+    meta.description.content = menuItem?.description
+    meta.title.content = menuItem?.title
+  }, [pathname])
+
+  const getPageLocation = () => {
     const href = globalThis.document.location.href
     const host = globalThis.document.location.host
     const path = href.split(host)
-    if (pathname !== path[1]) {
-      setPathname(path[1])
-      setMenuActive(path[1])
-      const title = path[1].split('/#')
-      console.log(title)
-      window.history.pushState(`${path[0]}${host}`, 'title', path[1])
-      document.title = `Kapelamendi - ${capitalize(title[1])}`
-    }
-  }, [pathname])
-  const capitalize = (text = 'Medios de producción') => {
-    return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()
+
+    const menuItemArray = menuItems.map(item => {
+      const { link, title, description, permalink, canonicalURL } = item
+      return (item.link === path[1]) ? [['link', link], ['title', title], ['description', description], ['permalink', permalink], ['canonicalURL', canonicalURL]] : null
+    }).filter((el) => el !== null).flat()
+
+    const result = { ...Object.fromEntries(menuItemArray), href: href, path: path[1] }
+
+    return result
   }
+
   const handleMenuIcon = () => {
     setIsHidden(!isHidden)
   }
@@ -34,7 +45,9 @@ export default function Navbar ({ menuItems, client }) {
     <nav className='bg-primary py-4 px-8 fixed w-full'>
       <div className='max-w-8xl mx-auto border-b-2 pb-4 lg:pb-0 lg:border-0 border-black'>
         <div className='flex justify-between items-center'>
-          <div className='items-center text-lg font-bold'>Kapelamendi</div>
+          <div className='items-center text-lg font-bold'>
+            <a href='/#inicio'><img src='/images/logo.png' alt='Kapelamendi' width={114} height={28} /></a>
+          </div>
           <div className='hidden lg:flex items-center space-x-4 text-md font-medium'>
             {menuItems.map((item) => {
               return <NavButton key={item.link} link={item.link} menuActive={menuActive} handleClick={handleClick}>{item.text}</NavButton>
