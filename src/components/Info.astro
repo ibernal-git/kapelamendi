@@ -1,0 +1,16 @@
+---
+  import Check from '../components/Icons/Check.jsx'
+  export interface Props {
+    title: string,
+    subtitle?: string
+  }
+  const { title, subtitle } = Astro.props;
+
+---
+
+<div class="mb-10 lg:mb-4">
+  <p class="text-primary lg:text-secondary text-lg inline-flex gap-4 font-bold">
+    <span class="lg:hidden"><Check color='#fc9200'/></span><span class="check-icon lg:inline-flex"><Check color='#062b5b'/></span> {title}
+  </p>
+  <p class="ml-11">{subtitle}</p>
+</div>

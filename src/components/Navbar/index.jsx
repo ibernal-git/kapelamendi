@@ -7,14 +7,17 @@ export default function Navbar ({ menuItems, client }) {
 
   useEffect(() => {
     const menuItem = getPageLocation()
+    console.log(menuItem.title)
 
     setPathname(menuItem?.link)
     setMenuActive(menuItem?.path)
     window.history.pushState(menuItem?.href, menuItem?.title, menuItem?.link)
-    document.title = menuItem?.title
+    document.title = menuItem.title ?? 'Kapelamendi - Empresa de fabricación y mecanizado'
     const meta = document.getElementsByTagName('meta')
-    meta.description.content = menuItem?.description
-    meta.title.content = menuItem?.title
+    if (menuItem.description && menuItem.title) {
+      meta.description.content = menuItem?.description
+      meta.title.content = menuItem?.title
+    }
   }, [pathname])
 
   const getPageLocation = () => {
