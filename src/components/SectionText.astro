@@ -1,10 +1,15 @@
 ---
   export interface Props {
     textColor: string,
-    title: string
+    title: string,
+    isCenter?: Boolean
   }
-  const { textColor, title } = Astro.props;
-  const tailwindClass = `${textColor} mt-4 text-center`
+  const { textColor, title, isCenter = true } = Astro.props;
+
+  let tailwindClass
+
+  if (isCenter) tailwindClass = `${textColor} mt-4 text-center`
+  else  tailwindClass = `${textColor} mt-4`
 
 ---
 
