@@ -1,14 +1,14 @@
 import NavButton from '../NavButton'
 import { useState, useEffect } from 'react'
+import db from '../../data/db.json'
 export default function Navbar ({ menuItems, client }) {
   const [isHidden, setIsHidden] = useState(true)
   const [menuActive, setMenuActive] = useState(false)
   const [pathname, setPathname] = useState('')
+  const url = db.url ?? ''
 
   useEffect(() => {
     const menuItem = getPageLocation()
-    console.log(menuItem.title)
-
     setPathname(menuItem?.link)
     setMenuActive(menuItem?.path)
     window.history.pushState(menuItem?.href, menuItem?.title, menuItem?.link)
@@ -49,7 +49,7 @@ export default function Navbar ({ menuItems, client }) {
       <div className='max-w-8xl mx-auto border-b-2 pb-4 lg:pb-0 lg:border-0 border-black'>
         <div className='flex justify-between items-center'>
           <div className='items-center text-lg font-bold'>
-            <a href='/#inicio'><img src='/images/logo.png' alt='Kapelamendi' width={114} height={28} /></a>
+            <a href='/#inicio'><img src={`${url}/images/logo.png`} alt='Kapelamendi' width={114} height={28} /></a>
           </div>
           <div className='hidden lg:flex items-center space-x-4 text-md font-medium'>
             {menuItems.map((item) => {
