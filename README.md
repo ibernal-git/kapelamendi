@@ -38,6 +38,19 @@
 └── package.json
 ```
 
+## Styling
+
+This project is built using tailwindcss. You can see configuration file in tailwind.config.js
+
+### Color Palette
+
+primary: **#fc9200**,
+secondary: **#062b5b**,
+accent: **#fff0db**,
+links: **#062b5b**
+
+## Astro info
+
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
 There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
