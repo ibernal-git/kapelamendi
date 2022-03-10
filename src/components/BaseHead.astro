@@ -9,7 +9,8 @@
   const { title, description, permalink } = Astro.props;
   let canonicalURL = Astro.request.canonicalURL;
   const url = db.url ?? ''
-
+  const noindexArray = db.noindex ?? []
+  const noindex = noindexArray.includes(canonicalURL.pathname)
 ---
 <!-- Global Metadata -->
 <meta charset='utf-8' />
@@ -42,6 +43,7 @@
 <!-- Primary Meta Tags -->
 <meta name='title' content={db.title} />
 <meta name='description' content={db.description} />
+{noindex && <meta name="robots" content="noindex">}
 
 <!-- Sitemap -->
 <link rel='sitemap' href={`${url}/sitemap.xml`} />

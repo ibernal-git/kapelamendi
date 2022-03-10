@@ -108,5 +108,10 @@
     "PAPELERO",
     "MAQUINARIA ESPECIAL",
     "BIENES DE EQUIPO EN GENERAL"
+  ],
+  "noindex": [
+    "/aviso-legal/",
+    "/politica-de-cookies/",
+    "/privacidad/"
   ]
 }
