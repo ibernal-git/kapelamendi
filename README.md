@@ -7,12 +7,30 @@
 ├── public/
 ├── src/
 │   |── pages/
-│   |    └── index.astro
+│   |    |── index.astro
+│   |    |── medios-de-produccion.astro
+│   |    |── privacidad.astro
+│   |    |── aviso-legal.astro
+│   |    └── politica-de-cookies.astro
 │   |── components/
-│   |   |── BaseHead.astro
-│   |   |── Navbar
+│   |   |── BaseHead.astro // html head
+│   |   |── AppLayout.astro // template for pages
+│   |   |── Content.astro
+│   |   |── Info.astro // index info text template
+│   |   |── Section.astro // page sections
+│   |   |── SectionImg.astro
+│   |   |── SectionText.astro
+│   |   |── Footer.astro
+│   |   |── Cookies // react component for manage cookies banner
+│   |   |── Navbar // react component for manage page menu, change meta in head, active menu item, change, mobile icon and display, ...
 │   |   |── NavButton
-│   |   └── Slider
+│   |   |── Slider
+│   |   └── Icons
+│   |        |── Check
+│   |        |── Control
+│   |        |── Phone
+│   |        |── Production
+│   |        └── Service
 │   |── styles/
 │   |    └── global.css
 |── postcss.config.js
