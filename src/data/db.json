@@ -1,0 +1,117 @@
+{
+  "title":"Kapelamendi - Empresa de fabricación y mecanizado",
+  "description": "Empresa de fabricación de maquinaria industrial",
+  "url": "",
+  "permalink": "http://kapelamendi.com/",
+  "menuItems": [
+    {
+      "link": "/#inicio",
+      "text": "Inicio",
+      "title": "Kapelamendi - Empresa de fabricación y mecanizado",
+      "description": "Empresa de fabricación de maquinaria industrial",
+      "canonicalURL": "https://kapelamendi.es/#inicio",
+      "permalink": "https://kapelamendi.es/#inicio"
+    },
+    {
+      "link": "/#empresa",
+      "text": "Empresa",
+      "title": "Kapelamendi - Empresa",
+      "description": "Fundada en 2005 nos dedicamos a la fabricación y mecanizado bajo plano del cliente",
+      "canonicalURL": "https://kapelamendi.es/#empresa",
+      "permalink": "https://kapelamendi.es/#empresa"
+    },
+    {
+      "link": "/#sectores",
+      "text": "Sectores",
+      "title": "Kapelamendi - Sectores",
+      "description": "Gracias a nuestra amplia experiencia nos dedicamos a diferentes sctores punteros como el siderúrgico, prensas mecánicas e hidráulicas, eólico, energía, cementero, papeleromaquinaria especial y bienes de equipo en general",
+      "canonicalURL": "https://kapelamendi.es/#sectores",
+      "permalink": "https://kapelamendi.es/#sectores"
+    },
+    {
+      "link": "/#productos-y-servicios",
+      "text": "Productos y servicios",
+      "title": "Kapelamendi - Productos y servicios",
+      "description": "Mecanizado de piezas de gran tamaño y peso. Hasta 12 toneladas. Montaje de conjuntos y subconjuntos de piezas",
+      "canonicalURL": "https://kapelamendi.es/#productos-y-servicios",
+      "permalink": "https://kapelamendi.es/#productos-y-servicios"
+    },
+    {
+      "link": "/medios-de-produccion",
+      "text": "Medios de producción",
+      "title": "Kapelamendi - Medios de producción",
+      "description": "Empresa de fabricación de maquinaria industrial",
+      "canonicalURL": "https://kapelamendi.es/#medios-de-produccion",
+      "permalink": "https://kapelamendi.es/#medios-de-produccion"
+    },
+    {
+      "link": "/#calidad",
+      "text": "Calidad",
+      "title": "Kapelamendi - Calidad",
+      "description": "Kapelamendi cuenta con la acreditación AENOR de su sistema de calidad en ISO 9001:2015. Verificamos los productos fabricados gracias a diferentes equipos de metrología que disponemos (calibres, micrómetros, sondas, ..",
+      "canonicalURL": "https://kapelamendi.es/#calidad",
+      "permalink": "https://kapelamendi.es/#calidad"
+    },
+    {
+      "link": "/#onatek",
+      "text": "Onatek",
+      "title": "Kapelamendi - Onatek",
+      "description": "ONATEK agrupa tres centros productivos complementarios referentes en su sector, con una alta experiencia en la fabricación de componentes y preparados para asumir nuevos retos productivos.",
+      "canonicalURL": "https://kapelamendi.es/#onatek",
+      "permalink": "https://kapelamendi.es/#ontatek"
+    },
+    {
+      "link": "/#contacto",
+      "text": "Contacto",
+      "title": "Kapelamendi - Contacto",
+      "description": "Kapelamendi - Contacta con nosotros - 945 26 16 00 - compras@kapelamendi.com",
+      "canonicalURL": "https://kapelamendi.es/#contacto",
+      "permalink": "https://kapelamendi.es/#contacto"
+    }
+  ],
+  "articles": [
+    {
+      "title": "Servicios",
+      "icon": "service",
+      "content": [
+        "Mecanizado de piezas de hasta 10 toneladas",
+        "Montaje de conjuntos y subconjuntos de piezas",
+        "Construcción, reparación y montaje de maquinaria especial, bajo plano del cliente, hasta 50 toneladas"
+      ]
+    },
+    {
+      "title": "Medios de producción",
+      "icon": "production",
+      "content": [
+        "Medios de producción",
+        "Tornos verticales hasta 3800 mm. de diametro",
+        "Tornos horizontales hasta 3000mm de longitud",
+        "Mandrinadoras de columna hasta 5000 x 2500 mm",
+        "Fresadoras hasta 5000 mm",
+        "Rectificadoras, taladros, mortajadoras, etc."
+      ]
+    },
+    {
+      "title": "Elementos de control",
+      "icon": "control",
+      "content": [
+        "Tridimensional Stiefelmayer-Zeiss cpm capacidad de 2400 x 1400 x 1200 mm."
+      ]
+    }
+  ],
+  "sectores": [
+    "SIDERÚRGICO",
+    "PRENSAS MECÁNICAS E HIDRÁULICAS",
+    "EÓLICO",
+    "ENERGÍA",
+    "CEMENTERO",
+    "PAPELERO",
+    "MAQUINARIA ESPECIAL",
+    "BIENES DE EQUIPO EN GENERAL"
+  ],
+  "noindex": [
+    "/aviso-legal/",
+    "/politica-de-cookies/",
+    "/privacidad/"
+  ]
+}

@@ -1,0 +1,56 @@
+---
+  import db from '../data/db.json'
+
+  export interface Props {
+    title: string,
+    description: string,
+    permalink: string;
+  }
+  const { title, description, permalink } = Astro.props;
+  let canonicalURL = Astro.request.canonicalURL;
+  const url = db.url ?? ''
+  const noindexArray = db.noindex ?? []
+  const noindex = noindexArray.includes(canonicalURL.pathname)
+---
+<!-- Global Metadata -->
+<meta charset='utf-8' />
+<meta name='viewport' content='width=device-width' />
+
+<!-- Favicon -->
+
+<link rel="icon" type="image/png" href={`${url}/favicon/favicon-32x32.png`} sizes="32x32">
+<link rel="icon" type="image/png" href={`${url}/favicon/favicon-128x128.png`} sizes="128x128">
+<link rel="icon" type="image/png" href={`${url}/favicon/favicon-152x152.png`} sizes="152x152">
+<link rel="icon" type="image/png" href={`${url}/favicon/favicon-152x152.png`} sizes="152x152">
+<link rel="icon" type="image/png" href={`${url}/favicon/favicon-167x167.png`} sizes="167x167">
+<link rel="icon" type="image/png" href={`${url}/favicon/favicon-180x180.png`} sizes="180x180">
+<link rel="icon" type="image/png" href={`${url}/favicon/favicon-192x192.png`} sizes="192x192">
+<link rel="icon" type="image/png" href={`${url}/favicon/favicon-196x196.png`} sizes="196x196">
+
+<link rel="apple-touch-icon" sizes="57x57"  href={`${url}/favicon/favicon-57x57.png`}>
+<link rel="apple-touch-icon" sizes="114x114"  href={`${url}/favicon/favicon-114x114.png`}>
+<link rel="apple-touch-icon" sizes="72x72"  href={`${url}/favicon/favicon-72x72.png`}>
+<link rel="apple-touch-icon" sizes="144x144"  href={`${url}/favicon/favicon-144x144.png`}>
+<link rel="apple-touch-icon" sizes="60x60"  href={`${url}/favicon/favicon-60x60.png`}>
+<link rel="apple-touch-icon" sizes="120x120"  href={`${url}/favicon/favicon-120x120.png`}>
+<link rel="apple-touch-icon" sizes="76x76"  href={`${url}/favicon/favicon-76x76.png`}>
+<link rel="apple-touch-icon" sizes="152x152"  href={`${url}/favicon/favicon-152x152.png`}>
+
+<meta name="application-name" content="Kapelamendi">
+<meta name="msapplication-TileImage" content={`${url}/favicon/favicon.png`}>
+<meta name="msapplication-TileColor" content="#fc9200">
+
+<!-- Primary Meta Tags -->
+<meta name='title' content={db.title} />
+<meta name='description' content={db.description} />
+{noindex && <meta name="robots" content="noindex">}
+
+<!-- Sitemap -->
+<link rel='sitemap' href={`${url}/sitemap.xml`} />
+
+<!-- SEO -->
+<link rel='canonical' href={canonicalURL} />
+
+<style global>
+    @import "../styles/global.css";
+</style>

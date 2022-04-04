@@ -1,0 +1,61 @@
+---
+  import AppLayout from '../components/AppLayout.astro'
+  import Section from '../components/Section.astro'
+  import SectionText from '../components/SectionText.astro'
+  import SectionImg from '../components/SectionImg.astro'
+---
+<AppLayout>
+  <section class="py-16 px-6">
+    <div  class="lg:container text-white text-center py-16">
+      <h2 class="text-secondary text-4xl font-bold">MEDIOS DE PRODUCCIÓN</h2>
+    </div>
+  </section>
+  <Section background="bg-secondary">
+    <SectionText textColor="text-white" title="TORNOS VERTICALES">
+      <p>Capacidad para tornear:</p>
+      <p>3.750 mm DIAMETRO, 1.700 mm ALTURA Y SOPORTANDO</p>
+      <p>HASTA 10.000 Kg.</p>
+    </SectionText>
+    <SectionImg images={[
+      {type: "shadow-2xl border-2 border-primary", url:"../images/torno-1.jpeg"},
+      {type: "shadow-2xl border-2 border-primary", url:"../images/torno-2.jpeg"}
+    ]}/>
+  </Section>
+  <Section background="bg-white">
+    <SectionText textColor="text-secondary" title="TORNOS PARALELOS">
+      <p>Capacidad para tornear : hasta 1.000 mm de diámetro y  3.000 mm. de longitud</p>
+      <p> soportando hasta  6.000 kg.</p>
+    </SectionText>
+    <SectionImg images={[
+      {type: "shadow-2xl border-2 border-primary", url:"../images/torno-paralelo.jpeg"}
+    ]}/>
+  </Section>
+  <Section background="bg-secondary">
+    <SectionText textColor="text-white" title="FRESADORAS Y MANDRINADORAS">
+      <p>Capacidad de mandrinado: hasta 5.000 mm x 2.500 mm.</p>
+      <p>Soportando hasta  12.500 kg.</p>
+    </SectionText>
+    <SectionImg images={[
+      {type: "shadow-2xl border-2 border-primary", url:"../images/fresadoras-mandrinadoras-1.jpeg"},
+      {type: "shadow-2xl border-2 border-primary", url:"../images/fresadoras-mandrinadoras-2.jpeg"}
+    ]}/>
+  </Section>
+  <Section background="bg-white">
+    <SectionText textColor="text-secondary" title="RECTIFICADORAS">
+      <p>Rectificado de piezas con un diámetro máximo rectificable de 600 mm.</p>
+      <p>longitud máxima de 3.500 mm.</p>
+    </SectionText>
+    <SectionImg images={[
+      {type: "shadow-2xl border-2 border-primary", url:"../images/rectificadoras-1.jpeg"}
+    ]}/>
+    <div class="pb-16 lg:px-16">
+      <div class="mt-16 text-secondary text-center">
+        <p>Rectificadora tangencial para una superficie máxima rectificable de 4.000mm x 700mm.</p>
+      </div>
+    </div>
+    <SectionImg images={[
+      {type: "img-shadow", url:"../images/rectificadoras-2.jpeg"},
+      {type: "img-shadow", url:"../images/rectificadoras-3.jpeg"}
+    ]}/>
+  </Section>
+</AppLayout>

@@ -6,10 +6,50 @@
 /
 ├── public/
 ├── src/
-│   └── pages/
-│       └── index.astro
+│   |── pages/
+│   |    |── index.astro
+│   |    |── medios-de-produccion.astro
+│   |    |── privacidad.astro
+│   |    |── aviso-legal.astro
+│   |    └── politica-de-cookies.astro
+│   |── components/
+│   |   |── BaseHead.astro // html head
+│   |   |── AppLayout.astro // template for pages
+│   |   |── Content.astro
+│   |   |── Info.astro // index info text template
+│   |   |── Section.astro // page sections
+│   |   |── SectionImg.astro
+│   |   |── SectionText.astro
+│   |   |── Footer.astro
+│   |   |── Cookies // react component for manage cookies banner
+│   |   |── Navbar // react component for manage page menu, change meta in head, active menu item, change, mobile icon and display, ...
+│   |   |── NavButton
+│   |   |── Slider
+│   |   └── Icons
+│   |        |── Check
+│   |        |── Control
+│   |        |── Phone
+│   |        |── Production
+│   |        └── Service
+│   |── styles/
+│   |    └── global.css
+|── postcss.config.js
+|── tailwind.config.js
 └── package.json
 ```
+
+## Styling
+
+This project is built using tailwindcss. You can see configuration file in tailwind.config.js
+
+### Color Palette
+
+primary: **#fc9200**,
+secondary: **#062b5b**,
+accent: **#fff0db**,
+links: **#062b5b**
+
+## Astro info
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 

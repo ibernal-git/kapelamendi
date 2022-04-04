@@ -1,0 +1,13 @@
+---
+  export interface Props {
+    images: Object[],
+  }
+  const { images } = Astro.props;
+
+---
+<div class="flex flex-wrap gap-4 flex-col space-y-16 lg:space-y-0 lg:flex-row px-8">
+  {images.map((img) => {
+    const tailwindClass = `${img.type} object-cover w-full max-w-[500px] md:w-1/2 mx-auto`
+    return <img class={tailwindClass} src={img.url} />
+  })}
+</div>

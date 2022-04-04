@@ -1,0 +1,29 @@
+.slider {
+  display: flex;
+  padding-top: 60px;
+  width: 100%;
+  height: 500px;
+
+  scroll-snap-type: x mandatory;
+
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.slider::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+.sliderImg {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  scroll-snap-align: center;
+}
+
+@media (max-width: 1024px) {
+  .slider {
+    padding-top: 78px;
+    max-height: 300px;
+  }
+}

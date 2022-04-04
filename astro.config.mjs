@@ -6,6 +6,6 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
   // Comment out "renderers: []" to enable Astro's default component support.
   renderers: ['@astrojs/renderer-react'],
   buildOptions: {
-    site: 'http://kapelamendi.es/'
+    site: 'http://kapelamendi.com'
   }
 })

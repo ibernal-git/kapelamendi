@@ -1,0 +1,39 @@
+---
+  import BaseHead from './BaseHead.astro'
+  import Navbar from './Navbar'
+  import Slider from './Slider'
+  import Cookies from './Cookies'
+  import Content from './Content.astro'
+  import Footer from './Footer.astro'
+  import db from '../data/db.json'
+
+  let title = db.title;
+  let description = db.description;
+  let permalink = db.permalink
+  const url = db.url ?? ''
+  const menuItems = db.menuItems
+
+---
+
+<html lang="es">
+	<head>
+		<title>{title}</title>
+    <BaseHead title={title} description={description} permalink={permalink}/>
+	</head>
+	<body>
+  <div id="inicio" class="min-h-screen flex flex-col justify-between">
+    <script>/* @ts-ignore */</script>
+    <Navbar menuItems={menuItems} client:load />
+    <Slider />
+    <Content>
+      <slot />
+    </Content>
+    <Footer>
+      <p class="text-xs md:text-base">Diseñado por Gemetik - Soluciones Tecnológicas</p>
+      <p class="text-xs md:text-base">Todos los derechos reservados © 2022</p>
+      <p class="text-xs md:text-base"><a href={`${url}/politica-de-cookies`}>Política de cookies</a> | <a href={`${url}/privacidad`}> Política de privacidad</a> | <a href={`${url}/aviso-legal`}> Aviso legal</a></p>
+    </Footer>
+    <!-- <Cookies client:idle /> -->
+  </div>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+/* src/styles/global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #fc9200;
+  --secondary: #062b5b;
+  --links: #062b5b;
+  --accent: #fff0db;
+}
+
+@media (max-width: 1024px) {
+  .check-icon {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .mobile-full-w {
+    max-width: 100%;
+  }
+  .mobile-80-w {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.img-shadow {
+  -webkit-box-shadow: 14px 18px 0px 5px #fc9200; 
+  box-shadow: 15px 15px 0px 5px #fc9200;
+}
+@media (min-width:1024px) and (max-width:1279px) {
+  .img-shadow {
+    margin-bottom: 45px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+section{
+  scroll-margin-top: 60px;
+}
+.menu-active {
+  color: white;
+}
